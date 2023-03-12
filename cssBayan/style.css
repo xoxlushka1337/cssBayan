@@ -1,0 +1,83 @@
+@media (hover: hover) {
+  .accordion:hover {
+    color: brown;
+  }
+  .accordion:hover .accordion_icon {
+    opacity: 1;
+    transition: 0.5s;
+  }
+  .accordion_conteiner:hover {
+    border: 1px rgb(43, 255, 0) solid;
+  }
+  .accordion_conteiner:hover .accordion_icon {
+    transform: rotate(0deg);
+    transition: 0.5s;
+  }
+  .accordion_checkbox:hover ~ .accordion_toggl {
+    max-height: 156em;
+  }
+  .accordion_conteiner {
+    cursor: pointer;
+  }
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.content {
+  width: 15em;
+  margin: 0 auto;
+}
+.accordion {
+  margin-top: 2.5em;
+}
+
+.accordion_conteiner {
+  position: relative;
+  width: 15em;
+  border-bottom: 0.07em blue solid;
+  /* border-radius: 0.3em; */
+}
+
+.accordion_checkbox:checked ~ .accordion_header .accordion_icon {
+  transform: rotate(0deg);
+}
+.accordion_header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.9em 0.6em;
+}
+.accordion_header:active {
+  background-color: rgb(135, 135, 206);
+}
+.accordion_icon {
+  opacity: 0.5;
+  background-image: url(./imgs/cross-46.svg);
+  width: 1.25em;
+  height: 1.25em;
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+
+.accordion_checkbox {
+  width: 0;
+  height: 0;
+  appearance: none;
+  position: absolute;
+}
+.accordion_checkbox:checked ~ .accordion_toggl {
+  max-height: 156em;
+}
+
+.accordion_toggl {
+  text-align: center;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s;
+}
+.accordion_img {
+  margin: 0 auto;
+  height: 12.5em;
+  padding-top: 1.25em;
+  padding-bottom: 0.6em;
+}
