@@ -14,7 +14,9 @@
     transition: 0.5s;
   }
   .accordion_checkbox:hover ~ .accordion_toggl {
+    opacity: 1;
     max-height: 156em;
+    transition: all 1s;
   }
   .accordion_conteiner {
     cursor: pointer;
@@ -35,7 +37,7 @@ body {
 .accordion_conteiner {
   position: relative;
   width: 15em;
-  border-bottom: 0.07em blue solid;
+  border-bottom: 0.125em rgb(135, 135, 206) solid;
   margin-bottom: 0.6em;
  
 }
@@ -68,13 +70,16 @@ body {
 }
 .accordion_checkbox:checked ~ .accordion_toggl {
   max-height: 156em;
+  opacity: 1;
+  transition: all 0.5s;
 }
 
 .accordion_toggl {
   text-align: center;
+  opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transition: 0.4s;
+  transition: all 0.5s;
 }
 .accordion_img {
   margin: 0 auto;
