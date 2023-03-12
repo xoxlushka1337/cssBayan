@@ -1,13 +1,19 @@
 @media (hover: hover) {
   .accordion:hover {
-    color: brown;
+    color: rgb(24, 24, 185);
   }
+ 
   .accordion:hover .accordion_icon {
     opacity: 1;
     transition: 0.5s;
   }
-  .accordion_conteiner:hover {
-    border: 1px rgb(43, 255, 0) solid;
+  .accordion_conteiner:active{
+    opacity: 0.5;
+    color: rgb(41, 39, 39);
+  }
+
+  .accordion_header {
+   cursor: pointer;
   }
   .accordion_conteiner:hover .accordion_icon {
     transform: rotate(0deg);
@@ -22,12 +28,19 @@
     cursor: pointer;
   }
 }
+
+@media ( hover:none){
+  .accordion_header:active {
+    background-color: rgb(135, 135, 206);
+  }
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
 .content {
-  width: 15em;
+  width: 15.5em;
   margin: 0 auto;
 }
 .accordion {
@@ -41,21 +54,21 @@ body {
   position: relative;
   width: 15em;
   border-bottom: 0.125em rgb(135, 135, 206) solid;
-  margin-bottom: 0.6em;
- 
+  margin-bottom: 0.4em;
 }
 
 .accordion_checkbox:checked ~ .accordion_header .accordion_icon {
   transform: rotate(0deg);
 }
+.accordion_checkbox:checked ~ .accordion_header .accordion_title{
+  color: rgb(24, 24, 185);
+}
 .accordion_header {
   display: flex;
   justify-content: space-between;
-  padding: 0.9em 0.4em;
+  padding: 0.5em 0.4em;
 }
-.accordion_header:active {
-  background-color: rgb(135, 135, 206);
-}
+
 .accordion_icon {
   opacity: 0.5;
   background-image: url(./imgs/cross-46.svg);
@@ -87,18 +100,18 @@ body {
 .accordion_img {
   margin: 0 auto;
   max-width: 15em;
-  max-height: 12.5em;
+  max-height: 10.5em;
   padding-top: 1em;
   padding-bottom: 0.6em;
 }
 
 @media ( min-width: 580px){
   .content {
-    width: 24em;
+    width: 20em;
     margin: 0 auto;
   }
   .accordion {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     color: rgb(41, 39, 39);
     margin-top: 2.5em;
@@ -106,13 +119,76 @@ body {
   
   .accordion_conteiner {
     position: relative;
-    width: 19em;
+    width: 18em;
     border-bottom: 0.14em rgb(135, 135, 206) solid;
-    margin-bottom: 0.6em;
+
   }
 
   .accordion_img {
     max-width: 18em;
-    max-height: 14.5em;
+    max-height: 11.5em;
+  }
+}
+@media ( min-width: 820px) {
+  .content {
+    width: 27em;
+    margin: 0 auto;
+  }
+  .accordion {
+    font-size: 22px;
+  }
+  .accordion_header {
+    padding: 0.5em 0.4em;
+  }
+  .accordion_conteiner {
+    position: relative;
+    width: 20em;
+    margin-bottom: 0.4em;
+  }
+
+  .accordion_img {
+    max-width: 19em;
+    max-height: 11.5em;
+  }
+}
+@media ( min-width: 1000px){
+  .content {
+    width: 27em;
+    margin: 0 auto;
+  }
+  .accordion {
+    font-size: 22px;
+  }
+  
+  .accordion_conteiner {
+    position: relative;
+    width: 20em;
+    margin-bottom: 0.4em;
+  }
+  .accordion_header {
+    padding: 0.5em 0.4em;
+  }
+  .accordion_img {
+    max-width: 19em;
+    max-height: 12.5em;
+  }
+}
+@media ( min-width: 1800px){
+  .content {
+    width: 33em;
+    margin: 0 auto;
+  }
+  .accordion {
+    font-size: 25px;
+  }
+  
+  .accordion_conteiner {
+    position: relative;
+    width: 24em;
+  }
+
+  .accordion_img {
+    max-width: 21em;
+    max-height: 15.5em;
   }
 }
