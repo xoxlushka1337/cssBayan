@@ -19,7 +19,7 @@
     transform: rotate(0deg);
     transition: 0.5s;
   }
-  .accordion_checkbox:hover ~ .accordion_toggl {
+  .accordion_radio:hover ~ .accordion_toggl {
     opacity: 1;
     max-height: 156em;
     transition: all 1s;
@@ -57,10 +57,10 @@ body {
   margin-bottom: 0.4em;
 }
 
-.accordion_checkbox:checked ~ .accordion_header .accordion_icon {
+.accordion_radio:checked ~ .accordion_header .accordion_icon {
   transform: rotate(0deg);
 }
-.accordion_checkbox:checked ~ .accordion_header .accordion_title{
+.accordion_radio:checked ~ .accordion_header .accordion_title{
   color: rgb(24, 24, 185);
 }
 .accordion_header {
@@ -78,13 +78,14 @@ body {
   transition: 0.5s;
 }
 
-.accordion_checkbox {
+.accordion_radio {
   width: 0;
   height: 0;
   appearance: none;
   position: absolute;
 }
-.accordion_checkbox:checked ~ .accordion_toggl {
+
+.accordion_radio:checked ~ .accordion_toggl {
   max-height: 156em;
   opacity: 1;
   transition: all 0.5s;
