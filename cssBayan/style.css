@@ -31,6 +31,9 @@ body {
   margin: 0 auto;
 }
 .accordion {
+  font-size: 17px;
+  font-weight: 600;
+  color: rgb(41, 39, 39);
   margin-top: 2.5em;
 }
 
@@ -48,7 +51,7 @@ body {
 .accordion_header {
   display: flex;
   justify-content: space-between;
-  padding: 0.9em 0.6em;
+  padding: 0.9em 0.4em;
 }
 .accordion_header:active {
   background-color: rgb(135, 135, 206);
@@ -85,9 +88,31 @@ body {
   margin: 0 auto;
   max-width: 15em;
   max-height: 12.5em;
-  padding-top: 1.25em;
+  padding-top: 1em;
   padding-bottom: 0.6em;
 }
-/* .accordion_img4{
-  width: 15em;
-} */
+
+@media ( min-width: 580px){
+  .content {
+    width: 24em;
+    margin: 0 auto;
+  }
+  .accordion {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(41, 39, 39);
+    margin-top: 2.5em;
+  }
+  
+  .accordion_conteiner {
+    position: relative;
+    width: 19em;
+    border-bottom: 0.14em rgb(135, 135, 206) solid;
+    margin-bottom: 0.6em;
+  }
+
+  .accordion_img {
+    max-width: 18em;
+    max-height: 14.5em;
+  }
+}
